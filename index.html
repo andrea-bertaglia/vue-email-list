@@ -9,7 +9,12 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
   <body>
-    <div id="app">{{ message }}</div>
+    <div id="app">
+      <h1>Lista indirizzi e-mail</h1>
+      <ol>
+        <li v-for="(emails, index) in emailsArray">{{emailsArray[index]}}</li>
+      </ol>
+    </div>
 
     <!-- Axios -->
     <script
