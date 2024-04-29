@@ -11,7 +11,8 @@
   <body>
     <div id="app">
       <h1>Lista indirizzi e-mail</h1>
-      <ol>
+      <p v-if="isLoading">Creazione lista indirizzi in corso...</p>
+      <ol v-if="!isLoading">
         <li v-for="(emails, index) in emailsArray">{{emailsArray[index]}}</li>
       </ol>
     </div>
