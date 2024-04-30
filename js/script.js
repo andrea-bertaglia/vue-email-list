@@ -22,7 +22,9 @@ createApp({
           .then((apiResp) => {
             console.log(apiResp);
             this.emailsArray.push(apiResp.data.response);
-            this.isLoading = false;
+            if (this.emailsArray.length === 10) {
+              this.isLoading = false;
+            }
           });
       }
     },
